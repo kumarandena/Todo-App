@@ -1,0 +1,50 @@
+{
+  "name": "nativescript-sqlite",
+  "version": "2.2.1",
+  "description": "A sqlite NativeScript module for Android and iOS",
+  "main": "sqlite",
+  "nativescript": {
+    "platforms": {
+      "android": "1.4.0",
+      "ios": "1.4.0"
+    },
+	"plugin": {
+	  "nan": "true",
+	  "pan": "true",
+	  "core3": "true",
+	  "core4": "true",
+	  "vue": "true",
+	  "category": "Database"
+	}
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanaela/nativescript-sqlite.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "SQL",
+    "SQLite",
+	"SQLCipher",
+	"Encrypted",
+    "Database",
+    "DB",
+    "iOS",
+    "Android",
+    "JavaScript",
+	"encryption"
+  ],
+  "author": {
+    "name": "Nathanael Anderson",
+    "email": "nathan@master-technology.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/nathanaela/nativescript-sqlite/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/nathanaela/nativescript-sqlite/issues"
+  },
+  "homepage": "https://github.com/nathanaela/nativescript-sqlite",
+  "readmeFilename": "README.md"
+}

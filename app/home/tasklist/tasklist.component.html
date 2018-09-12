@@ -1,0 +1,17 @@
+<ActionBar title="{{listname.length < 15 ? listname : 'Task List'}}" class="action-bar" flat="true">
+	<NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+	<ActionItem ios.position="right">
+		<Label text="Add Task" (tap)="createtask()" paddingright="20" color="green"></Label>
+	</ActionItem>
+</ActionBar>
+
+<ScrollView class="page">
+	<StackLayout>
+		<GridLayout rows="auto" columns="auto,*,auto,auto" *ngFor="let task of tasks; let i = index">
+			<Label row="0" col="0" [text]="i+ 1" class="task-lbl-count"></Label>
+			<Label row="0" col="1" [text]="task.task_name" class="task-lbl" textWrap="true"></Label>
+			<Label row="0" col="2" text="&#xf044;" class="fa edit-icon" (tap)="edittask(task)" verticalAlignment="center"></Label>
+			<Label row="0" col="3" text="&#xf014;" class="fa del-icon" (tap)="deletetask(task, i)" verticalAlignment="center"></Label>
+		</GridLayout>
+	</StackLayout>
+</ScrollView>

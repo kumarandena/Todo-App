@@ -1,0 +1,23 @@
+<ActionBar title="Todo App" class="action-bar" flat="true">
+	<ActionItem ios.position="right">
+		<Label text="Clear List" (tap)="cleartaskslist()" paddingright="20" color="red"></Label>
+	</ActionItem>
+	<ActionItem ios.position="right">
+		<Label text="Add List" (tap)="createtasklist()" paddingright="20" color="green"></Label>
+	</ActionItem>
+</ActionBar>
+
+<GridLayout>
+	<ScrollView class="page">
+		<StackLayout>
+			<GridLayout rows="auto, auto" columns="60, auto, *, auto" *ngFor="let list of lists; let i = index" class="list-card">
+				<Label row="0" col="0" [text]="i+ 1" class="list-lbl-count"></Label>
+				<Label row="0" col="1" colSpan="3" [text]="list.list_name" class="list-lbl" textWrap="true"></Label>
+				<Label row="1" col="1" text="Check Tasks" [nsRouterLink]="['./tasklist']" (tap)="setListid(list)" class="edit-label"></Label>
+				<Label row="1" col="2" text="Edit" class="edit-label" width="50" (tap)="edittasklist(list)"></Label>
+				<Label row="1" col="3" text="&#xf014;" class="fa del-icon" marginTop="5" (tap)="deletetasklist(list, i)"></Label>
+			</GridLayout>
+			
+		</StackLayout>
+	</ScrollView>
+</GridLayout>
